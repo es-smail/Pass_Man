@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">newPROJECT</string>
+    <string name="add_login">add_login</string>
+    <string name="email">email</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
 </resources>
