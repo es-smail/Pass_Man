@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/login_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Email"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintStart_toEndOf="@+id/login_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Password"
+        app:layout_constraintEnd_toStartOf="@+id/update"
+        app:layout_constraintStart_toEndOf="@+id/login_img"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:radius="50dp"
+        android:text="Delet"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:radius="50dp"
+        android:text="update"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete" />
+
+    <ImageView
+        android:id="@+id/cart_img"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_img"
+        app:srcCompat="@drawable/cart1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:gravity="center"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/cart_img"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="Number"
+        app:layout_constraintStart_toStartOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/type" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="expiry date"
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/valide"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="Valide from"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/vss"
+        android:layout_width="102dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="vss"
+        app:layout_constraintStart_toStartOf="@+id/valide"
+        app:layout_constraintTop_toBottomOf="@+id/valide" />
+
+    <Button
+        android:id="@+id/delete1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="16dp"
+        android:text="delet"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/update1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:text="update"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

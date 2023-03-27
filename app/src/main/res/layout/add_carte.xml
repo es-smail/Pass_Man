@@ -14,10 +14,10 @@
         android:layout_marginEnd="173dp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/save"
-        android:text="@string/save"
+        android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cart"
+        app:srcCompat="@drawable/cart1"
         tools:layout_editor_absoluteY="89dp" />
 
     <EditText

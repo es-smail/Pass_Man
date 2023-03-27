@@ -21,11 +21,11 @@
             android:name=".add_carte"
             android:exported="true" />
         <activity
-            android:name=".newadd_login"
+            android:name=".add_login"
             android:exported="true" />
         <activity
             android:name=".home"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".login"
             android:exported="true">

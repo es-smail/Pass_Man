@@ -5,7 +5,7 @@
     android:id="@+id/save"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newadd_login"
+    tools:context=".add_login"
     tools:ignore="DuplicateIds">
 
     <Button
@@ -13,11 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:text="save"
         android:background="@drawable/save"
+        android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText

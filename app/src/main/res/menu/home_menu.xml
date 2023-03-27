@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item android:id="@+id/add_login"
+        android:title="Add Login"
+        android:icon="@drawable/lock"/>
+    <item android:id="@+id/add_cart"
+        android:title="Add Cart"
+        android:icon="@drawable/cart1"/>
+
+</group>
+    <group android:checkableBehavior="single">
+        <item android:title="filter">
+            <menu>
+                <item android:id="@+id/f_login"
+                    android:title="Show All Login"
+                    android:icon="@drawable/lock"/>
+                <item android:id="@+id/f_cart"
+                    android:title="show All Cart"
+                    android:icon="@drawable/cart1"/>
+            </menu>
+        </item>
+    </group>
+    <group>
+    <item  android:title="Authenticate" >
+        <menu>
+             <item android:id="@+id/logout"
+                 android:title="Logout"
+                 android:icon="@drawable/sinout"/>
+        </menu>
+    </item>
+    </group>
+</menu>

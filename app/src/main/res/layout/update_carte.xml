@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
         android:layout_marginEnd="177dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/update"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/save"
+        android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
