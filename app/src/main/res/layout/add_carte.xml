@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/save"
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -31,14 +31,14 @@
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/add_vcc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/add_vcc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="vcc"
         android:inputType="number"
@@ -52,7 +52,7 @@
         android:id="@+id/add_expery"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="expery date"
         android:inputType="date"
@@ -65,7 +65,7 @@
         android:id="@+id/add_valide"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="54dp"
+        android:layout_marginBottom="44dp"
         android:ems="10"
         android:hint="valide from"
         android:inputType="date"
@@ -79,23 +79,23 @@
         android:id="@+id/imageView3"
         android:layout_width="208dp"
         android:layout_height="127dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153"
         app:srcCompat="@drawable/cart" />
 
     <EditText
         android:id="@+id/add_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="40dp"
         android:hint="Name"
         app:layout_constraintBottom_toTopOf="@+id/add_number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

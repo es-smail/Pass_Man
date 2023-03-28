@@ -12,19 +12,18 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/save"
         android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/n_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint=" New Name"
         android:inputType="textPersonName"
@@ -52,7 +51,7 @@
         android:id="@+id/n_valide"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="New valide from"
         android:inputType="date"
@@ -92,13 +91,14 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="231dp"
-        android:layout_height="170dp"
-        app:layout_constraintBottom_toTopOf="@+id/n_name"
+        android:layout_width="210dp"
+        android:layout_height="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689"
+        app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@drawable/cct" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
