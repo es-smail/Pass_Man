@@ -6,30 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".add_login"
-    tools:ignore="DuplicateIds">
+    tools:ignore="DuplicateIds"
+    android:background="@drawable/wave">
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/save"
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="124dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -54,12 +56,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginEnd="136dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="124dp"
         android:text="Generate password"
         android:textColor="#00B0FF"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
