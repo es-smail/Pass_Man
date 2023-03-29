@@ -1,171 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/login_img"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center"
-        android:hint="Email"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/delete"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="150dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center"
-        android:hint="Password"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/update"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
-
-
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:radius="50dp"
-        android:text="Delet"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/update"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/update"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:radius="50dp"
-        android:text="update"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete" />
-
-    <ImageView
-        android:id="@+id/cart_img"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cart1" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:gravity="center"
-        android:hint="Name"
-        android:textSize="14dp"
-        app:layout_constraintStart_toEndOf="@+id/cart_img"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <EditText
-        android:id="@+id/number"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="Number"
-        android:inputType="number"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <EditText
-        android:id="@+id/vss"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="vcc"
-        android:inputType="number"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/valide"
-        app:layout_constraintTop_toBottomOf="@+id/valide" />
-
-    <EditText
-        android:id="@+id/valide"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="Valide from"
-        android:inputType="number"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/date"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
-
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:hint="expiry date"
-        android:inputType="number"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/number"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
-
-    <Button
-        android:id="@+id/delete1"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="24dp"
-        android:text="delet"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/update1"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:text="update"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete1" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/login_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/loginicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="111dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="150dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="Email"
+                app:layout_constraintEnd_toStartOf="@+id/delete"
+                app:layout_constraintStart_toEndOf="@+id/login_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="150dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="Password"
+                app:layout_constraintEnd_toStartOf="@+id/update"
+                app:layout_constraintStart_toEndOf="@+id/login_img"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:radius="50dp"
+                android:text="Delet"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/update"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/update"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:radius="50dp"
+                android:text="update"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/cart_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_img"
+            app:srcCompat="@drawable/cart1" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Type" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="Number" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="expiry date" />
+
+            <TextView
+                android:id="@+id/valide"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="Valide from" />
+
+            <TextView
+                android:id="@+id/vss"
+                android:layout_width="102dp"
+                android:layout_height="19dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="vss" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/delete1"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+
+                android:text="delet"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/update1"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="update"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

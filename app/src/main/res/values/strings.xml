@@ -2,5 +2,10 @@
     <string name="app_name">newPROJECT</string>
     <string name="menu_open">Open</string>
     <string name="menu_close">Close</string>
+    <string name="new_valide_from">New valide from</string>
+    <string name="new_card_number">New Card Number</string>
+    <string name="new_name">New Name</string>
+    <string name="new_expiry_date">New expiry date</string>
+    <string name="new_vcc">New vcc</string>
 
 </resources>

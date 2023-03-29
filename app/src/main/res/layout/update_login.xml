@@ -15,7 +15,7 @@
         android:layout_marginStart="158dp"
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="68dp"
-        android:background="@drawable/save"
+
         android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

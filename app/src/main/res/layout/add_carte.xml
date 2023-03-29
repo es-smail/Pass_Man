@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/save"
+        android:layout_marginBottom="24dp"
+
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -27,12 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:hint="number"
+        android:hint="CARD NUMBER"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/add_vcc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/add_vcc"
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="vcc"
+        android:hint="CVC"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/add_expery"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,23 +53,24 @@
         android:id="@+id/add_expery"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
-        android:hint="expery date"
+        android:hint="MM/YY"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/add_valide"
+        app:layout_constraintBottom_toTopOf="@+id/add_pin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/add_valide"
+        android:id="@+id/add_pin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="valide from"
-        android:inputType="date"
+        android:hint="PIN"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/cart_add1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -84,18 +86,33 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153"
+        app:layout_constraintVertical_bias="0.091"
         app:srcCompat="@drawable/cart" />
 
     <EditText
         android:id="@+id/add_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="88dp"
         android:hint="Name"
         app:layout_constraintBottom_toTopOf="@+id/add_number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Type(Visa,Mastercard..)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_number"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
