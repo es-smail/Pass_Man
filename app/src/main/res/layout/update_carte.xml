@@ -9,35 +9,35 @@
     tools:context=".update_carte">
 
     <EditText
-        android:id="@+id/n_name"
+        android:id="@+id/u_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/new_name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/u_type"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/n_number"
+        android:id="@+id/u_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="@string/new_card_number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/n_vcc"
+        app:layout_constraintBottom_toTopOf="@+id/u_cvc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/n_valide"
+        android:id="@+id/u_pin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -51,28 +51,28 @@
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/n_expiry"
+        android:id="@+id/u_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="MM/YY"
+        android:hint="New MM/YY"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/n_valide"
+        app:layout_constraintBottom_toTopOf="@+id/u_pin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/n_vcc"
+        android:id="@+id/u_cvc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="new_CVC"
+        android:hint="New CVC"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/n_expiry"
+        app:layout_constraintBottom_toTopOf="@+id/u_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +80,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="210dp"
-        android:layout_height="136dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +90,7 @@
         app:srcCompat="@drawable/cct" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/u_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -102,14 +102,14 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/u_type"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
         android:ems="10"
-        android:hint="Type(Visa,Mastercard..)"
+        android:hint="New Type(Visa,Mastercard..)"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/n_number"
+        app:layout_constraintBottom_toTopOf="@+id/u_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

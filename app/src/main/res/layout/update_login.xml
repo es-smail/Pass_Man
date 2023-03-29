@@ -8,8 +8,7 @@
     tools:context=".update_login">
 
     <Button
-        android:id="@+id/n_login"
-
+        android:id="@+id/u_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -23,39 +22,51 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/n_email"
+        android:id="@+id/u_title"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="New Title"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/u_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/u_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="New Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/n_login"
+        app:layout_constraintBottom_toTopOf="@+id/u_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/n_password"
-        android:layout_width="0dp"
+        android:id="@+id/u_password"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="New password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/n_login"
+        app:layout_constraintBottom_toTopOf="@+id/u_generate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/n_email"
-        app:layout_constraintVertical_bias="0.746"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="223dp"
-        android:layout_height="144dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
@@ -65,7 +76,7 @@
         app:srcCompat="@drawable/img" />
 
     <Button
-        android:id="@+id/n_generate"
+        android:id="@+id/u_generate"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +84,7 @@
         android:text="Generate password"
         android:textColor="#00B0FF"
         android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/n_login"
+        app:layout_constraintBottom_toTopOf="@+id/u_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />

@@ -15,9 +15,6 @@
             android:name=".PasswordGenerator"
             android:exported="true" />
         <activity
-            android:name=".d1m"
-            android:exported="true" />
-        <activity
             android:name=".update_carte"
             android:exported="true" />
         <activity
