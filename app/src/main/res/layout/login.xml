@@ -37,30 +37,19 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <ImageView
         android:id="@+id/sinIn"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="355dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="160dp"
+        android:layout_width="315dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/gmail"
         android:text="Sin In With Google"
         android:textColor="#A91763D5"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="66dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/google_logo"
-        app:layout_constraintEnd_toEndOf="@+id/sinIn"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/sinIn"
-        app:layout_constraintTop_toBottomOf="@+id/sinIn" />
 
     <ImageView
         android:id="@+id/imageView6"
