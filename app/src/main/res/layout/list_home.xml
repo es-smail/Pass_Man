@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+
     android:orientation="vertical"
     android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/loginpart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -25,7 +27,7 @@
             android:orientation="vertical">
             <TextView
                 android:id="@+id/title"
-                android:hint="Title"
+                android:text="Title"
                 android:gravity="center"
                 android:layout_width="150dp"
                 android:layout_height="20dp"
@@ -58,9 +60,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <Button
+            <ImageView
                 android:id="@+id/delete"
-                android:layout_width="80dp"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
@@ -68,20 +70,23 @@
                 android:radius="50dp"
                 android:text="Delet"
                 android:textSize="12dp"
+                android:background="@drawable/trash"
                 app:layout_constraintBottom_toTopOf="@+id/update"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <Button
+            <ImageView
                 android:id="@+id/update"
-                android:layout_width="80dp"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
                 android:radius="50dp"
                 android:text="update"
                 android:textSize="10dp"
+                android:background="@drawable/update"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/delete" />
         </LinearLayout>
@@ -89,6 +94,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/cartpart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -165,6 +171,14 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="PIN" />
+            <TextView
+                android:id="@+id/expiry"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="Expiry_date" />
         </LinearLayout>
 
         <LinearLayout
@@ -173,20 +187,25 @@
             android:orientation="vertical"
             android:layout_marginTop="50dp">
 
-            <Button
+            <ImageView
                 android:id="@+id/delete1"
-                android:layout_width="80dp"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
 
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/trash"
                 android:text="delet"
                 android:textSize="12dp" />
 
-            <Button
+            <ImageView
                 android:id="@+id/update1"
-                android:layout_width="80dp"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="update"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:background="@drawable/update"/>
         </LinearLayout>
     </LinearLayout>
 
