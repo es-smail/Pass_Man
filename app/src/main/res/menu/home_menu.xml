@@ -12,6 +12,9 @@
     <group android:checkableBehavior="single">
         <item android:title="filter">
             <menu>
+                <item android:id="@+id/f_all"
+                    android:title="Show All"
+                    android:icon="@drawable/home"/>
                 <item android:id="@+id/f_login"
                     android:title="Show All Login"
                     android:icon="@drawable/lock"/>

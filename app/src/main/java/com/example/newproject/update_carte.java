@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.newproject.methods.DatabaseSqlite;
+import com.example.newproject.methods.UserCart;
 
 public class update_carte extends AppCompatActivity {
 
@@ -19,20 +20,28 @@ public class update_carte extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_carte);
         Intent intent = getIntent();
+        //call the id of the Object that we want to Update
         String id_cart = intent.getStringExtra("id_cart");
-
+        DatabaseSqlite obj = new DatabaseSqlite(this);
 
         Button u_cart_button =findViewById(R.id.u_cart);
-
         EditText u_name = findViewById(R.id.u_name);
         EditText u_type = findViewById(R.id.u_type);
         EditText u_number = findViewById(R.id.u_number);
         EditText u_cvc = findViewById(R.id.u_cvc);
         EditText u_date = findViewById(R.id.u_date);
         EditText u_pin = findViewById(R.id.u_pin);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         EditText add_expiry= findViewById( R.id.u_expiry);
-        DatabaseSqlite obj = new DatabaseSqlite(this);
+//get the information of the object
+       UserCart c = obj.Get_Cart(id_cart);
+
+       u_name.setText(c.getName());
+        u_type.setText(c.getType());
+        u_number.setText(c.getNumber()+"");
+        u_cvc.setText(c.getCvc()+"");
+        u_date.setText(c.getDate()+"");
+        u_pin.setText(c.getPin()+"");
+        add_expiry.setText(c.getExpiry_date()+"");
 
 
         u_cart_button.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +58,7 @@ public class update_carte extends AppCompatActivity {
 
                     Toast.makeText(update_carte.this, "Give All The Informations", Toast.LENGTH_SHORT).show();
 
-                }else if (name.length()<3 || type.length()<1|| number.length()<5 ||cvc.length()<=3 || date.length()<3 || pin.length()<3 || expiry_date.length()<4){
+                }else if (name.length()<3 || type.length()<1|| number.length()<8 ||cvc.length()<3 || date.length()<4 || pin.length()<4 || expiry_date.length()<4){
 
                     Toast.makeText(update_carte.this, "(Title|Email|Password) invalid", Toast.LENGTH_SHORT).show();
 

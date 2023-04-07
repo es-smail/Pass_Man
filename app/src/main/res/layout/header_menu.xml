@@ -5,11 +5,12 @@
     android:layout_height="200dp"
     android:padding="20dp"
     android:orientation="vertical"
-    android:background="#A91763D5">
+    android:background="#0F4C75">
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/loginicon"/>
+        android:src="@drawable/loginicon"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,6 +18,7 @@
         android:text="Pass_Man"
         android:textColor="@color/white"
         android:textSize="25dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

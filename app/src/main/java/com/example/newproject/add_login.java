@@ -23,6 +23,15 @@ public class add_login extends AppCompatActivity {
         EditText add_title = findViewById(R.id.add_title);
         EditText add_email = findViewById(R.id.add_email);
         EditText add_password = findViewById(R.id.add_password);
+        Button Generat = findViewById(R.id.add_generate);
+
+
+        Generat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(add_login.this, PasswordGenerator.class);
+                startActivity(intent);            }
+        });
 
         DatabaseSqlite obj = new DatabaseSqlite(this);
 

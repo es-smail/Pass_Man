@@ -10,8 +10,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
-import java.lang.reflect.Array;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -134,25 +132,47 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
         SQLiteDatabase sq=this.getWritableDatabase();
         sq.delete("cart","id=?",new String[]{id});
     }
-//    public UserLogin Get_login(String id_login) {
-//        UserLogin l =  null;
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        Cursor cursor = db.rawQuery("SELECT * FROM login WHERE id = id_login", new String[] { id_login });
-//
-//
-//        if (cursor.moveToFirst()) {
-//            l = (new UserLogin(cursor.getInt(0),
-//                    cursor.getString(1),
-//                    cursor.getString(2),
-//                    cursor.getString(3),
-//                    Timestamp.valueOf(cursor.getString(4))
-//
-//            ));
-//        }
-//        cursor.close();
-//        return l;
-//
-//    }
+    public UserLogin Get_login(String id_login) {
+        UserLogin l =  null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM login WHERE id = ?", new String[] { id_login });
+
+        if (cursor.moveToFirst()) {
+            l = new UserLogin(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    Timestamp.valueOf(cursor.getString(4))
+            );
+        }
+        cursor.close();
+        return l;
+
+    }
+    //getting the informations of the object that we want to update (that is the rulle of this method)
+    public UserCart Get_Cart(String id_Cart) {
+        UserCart c =  null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM cart WHERE id = ?", new String[] { id_Cart });
+
+        if (cursor.moveToFirst()) {
+            c = new UserCart(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getInt(3),
+                    cursor.getInt(4),
+                    cursor.getInt(5),
+                    cursor.getInt(6),
+                    Timestamp.valueOf(cursor.getString(7)),
+                    cursor.getInt(8)
+            );
+        }
+        cursor.close();
+        return c;
+
+    }
 }
 
 

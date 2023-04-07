@@ -26,17 +26,24 @@ public class update_login extends AppCompatActivity {
         EditText u_title = findViewById(R.id.u_title);
         EditText u_email = findViewById(R.id.u_email);
         EditText u_password = findViewById(R.id.u_password);
+        Button Generat = findViewById(R.id.u_generate);
+        Generat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(update_login.this, PasswordGenerator.class);
+                startActivity(intent);
+            }
+
+
+        });
 
 
         Intent intent = getIntent();
         String id_login = intent.getStringExtra("id_login");
-
-
-//        UserLogin l = obj.Get_login(id_login);
-//
-//        u_title.setText(l.getTitle());
-//        u_email.setText(l.getEmail());
-//        u_password.setText(l.getPassword());
+        UserLogin l = obj.Get_login(id_login);
+        u_title.setText(l.getTitle());
+        u_email.setText(l.getEmail());
+        u_password.setText(l.getPassword());
 
 
         add_login_button.setOnClickListener(new View.OnClickListener() {

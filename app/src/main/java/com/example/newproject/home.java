@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.compose.ui.text.input.TextInputService;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
@@ -88,6 +89,11 @@ public class home extends AppCompatActivity {
                     case R.id.add_cart:
                         Intent inten=new Intent(home.this,add_carte.class);
                         startActivity(inten);
+                        break;
+                    case R.id.f_all:
+                        ArrayList <item> k = obj1.getAllItems();
+                        AddItem a = new AddItem(k);
+                        list.setAdapter(a);
                         break;
                     case R.id.f_login:
                         ArrayList<item> F_L = new ArrayList<>();
@@ -235,14 +241,14 @@ public class home extends AppCompatActivity {
                 pin.setText( ((UserCart) l.get(position)).getPin()+"");
                 expiry_date.setText( ((UserCart) l.get(position)).getExpiry_date()+"");
 
-                String id= String.valueOf(((UserCart) l.get(position)).getId());
+                String idC= String.valueOf(((UserCart) l.get(position)).getId());
 
                 view.findViewById( R.id.loginpart ).setVisibility(View.GONE);
                 update_C.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(home.this, update_carte.class);
-                        intent.putExtra("id_cart", id);
+                        intent.putExtra("id_cart", idC);
                         startActivity(intent);
                     }
                 });
@@ -255,7 +261,7 @@ public class home extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         DatabaseSqlite obj = new DatabaseSqlite(home.this);
-                                        obj.delete_Cart(id);
+                                        obj.delete_Cart(idC);
                                         Toast.makeText(home.this, "Delet Valid", Toast.LENGTH_SHORT).show();
                                         Intent intent = getIntent();
                                         finish();

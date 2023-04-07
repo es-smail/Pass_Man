@@ -48,9 +48,9 @@ public class add_carte extends AppCompatActivity {
 
                     Toast.makeText(add_carte.this, "Give All The Informations", Toast.LENGTH_SHORT).show();
 
-                }else if (name.length()<3 || type.length()<1|| number.length()<5 ||cvc.length()<=3 || date.length()<3 || pin.length()<3 || expiry_date.length()<4){
+                }else if (name.length()<3 || type.length()<1|| number.length()<8 ||cvc.length()<3 || date.length()<4 || pin.length()<4 || expiry_date.length()<4){
 
-                    Toast.makeText(add_carte.this, "(Title|Email|Password) invalid", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(add_carte.this, "(Insert Of Iformation ) invalid", Toast.LENGTH_SHORT).show();
 
                 }else {
                     int n= Integer.parseInt(number);
