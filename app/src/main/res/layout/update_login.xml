@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="32dp"
 
         android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,9 +25,9 @@
         android:id="@+id/u_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:layout_marginLeft="2dp"
 
         android:hint="New Title"
         android:inputType="textEmailAddress"
@@ -36,36 +36,52 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <EditText
         android:id="@+id/u_email"
-        android:layout_width="0dp"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="16dp"
+
         android:ems="10"
         android:hint="New Email"
-        android:layout_marginLeft="2dp"
-
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/u_password"
+        app:layout_constraintBottom_toTopOf="@+id/password_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/u_password"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="New password"
-        android:inputType="textPassword"
-        android:layout_marginLeft="2dp"
-
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="402dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toTopOf="@+id/u_generate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/u_password"
+            android:layout_width="402dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/delet"
+            android:inputType="textPassword"
+            android:textSize="16dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/u_generate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/textView13"
         android:layout_width="120dp"
@@ -78,16 +94,17 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
+        app:layout_constraintVertical_bias="0.168"
         app:srcCompat="@drawable/update__login" />
 
     <Button
@@ -95,12 +112,26 @@
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:text="Generate password"
         android:textColor="#00B0FF"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/u_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/history"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/delet"
+        android:src="@drawable/history"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

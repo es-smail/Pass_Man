@@ -2,6 +2,7 @@ package com.example.newproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.newproject.methods.DatabaseSqlite;
+import com.example.newproject.methods.UserLogin;
 
 public class add_login extends AppCompatActivity {
 
@@ -22,6 +24,7 @@ public class add_login extends AppCompatActivity {
 
         EditText add_title = findViewById(R.id.add_title);
         EditText add_email = findViewById(R.id.add_email);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         EditText add_password = findViewById(R.id.add_password);
         Button Generat = findViewById(R.id.add_generate);
 
@@ -48,6 +51,8 @@ public class add_login extends AppCompatActivity {
                     Toast.makeText(add_login.this, "(Title|Email|Password) invalid", Toast.LENGTH_SHORT).show();
                 }else {
                     String n=  obj.Insert_login(title, email, password);
+                    int id_p= obj.getLastId();
+                      obj.Insert_P(id_p,password);
                     Toast.makeText(add_login.this,n, Toast.LENGTH_SHORT).show();
                     Intent intent= new Intent(add_login.this,home.class);
                     startActivity(intent);}

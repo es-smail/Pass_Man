@@ -2,6 +2,8 @@ package com.example.newproject.methods;
 
 
 import static java.util.Collections.sort;
+
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import android.content.ContentValues;
 import android.content.Context;
@@ -23,6 +25,7 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table login  (id INTEGER primary key AUTOINCREMENT,title TEXT,email TEXT,password TEXT,date_l TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
         db.execSQL("create table cart  (id INTEGER primary key AUTOINCREMENT,name TEXT,type TEXT,number INTEGER,cvc INTEGER,date INTEGER,pin INTEGER,date_c TIMESTAMP DEFAULT CURRENT_TIMESTAMP,expiry INTEGER)");
+        db.execSQL("create table Password  (id INTEGER ,password TEXT,date_p TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 
 
     }
@@ -31,6 +34,7 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS login");
         db.execSQL("DROP TABLE IF EXISTS cart");
+        db.execSQL("DROP TABLE IF EXISTS Password");
         onCreate(db);
     }
     ////////////////////////////////////// Login Add
@@ -173,6 +177,54 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
         return c;
 
     }
+
+    /////////////Historic password
+//    public void Insert_password(String password){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues contentValues= new ContentValues();
+//        contentValues.put("password", password);
+//        long result = db.insert("password", null, contentValues);
+//}
+    public void Insert_P(int id,String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues= new ContentValues();
+          contentValues.put("id", id);
+        contentValues.put("password", password);
+        db.insert("Password", null, contentValues);
+
+    }
+    public ArrayList<Password> getPasswordHistory(String Id) {
+        ArrayList<Password> arrayList = new ArrayList<>();
+        SQLiteDatabase s = this.getReadableDatabase();
+
+        // Query the login table
+        Cursor cursorPassword = s.rawQuery("SELECT * FROM Password WHERE id = ?"
+                ,new String[] { Id });
+        while (cursorPassword.moveToNext()) {
+            arrayList.add (new Password(cursorPassword.getInt(0),
+                    cursorPassword.getString(1),
+                    Timestamp.valueOf(cursorPassword.getString(2))
+                  ));
+        }
+        cursorPassword.close();
+
+        // Sort the arrayList in descending order based on the timestamp
+        Collections.sort(arrayList, Collections.reverseOrder());
+        return arrayList;
+    }
+    public int getLastId() {
+        int maxId = -1;
+        try (SQLiteDatabase db = getReadableDatabase();
+             Cursor cursor = db.rawQuery("SELECT MAX(id) FROM login", null)) {
+            if (cursor.moveToFirst()) {
+                maxId = cursor.getInt(0);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return maxId;
+    }
+
 }
 
 

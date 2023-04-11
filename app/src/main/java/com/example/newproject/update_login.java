@@ -2,11 +2,14 @@ package com.example.newproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.newproject.methods.DatabaseSqlite;
@@ -26,7 +29,13 @@ public class update_login extends AppCompatActivity {
         EditText u_title = findViewById(R.id.u_title);
         EditText u_email = findViewById(R.id.u_email);
         EditText u_password = findViewById(R.id.u_password);
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        ImageButton history = findViewById(R.id.history);
         Button Generat = findViewById(R.id.u_generate);
+
+
+;
         Generat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +53,20 @@ public class update_login extends AppCompatActivity {
         u_title.setText(l.getTitle());
         u_email.setText(l.getEmail());
         u_password.setText(l.getPassword());
+        String p =l.getPassword();
+        int id= Integer.parseInt(id_login);
 
+        //obj.Insert_P(id,p);
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(update_login.this, history_password.class);
+                intent.putExtra("id_history", id_login);
+                startActivity(intent);
+
+            }
+        });
 
         add_login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +80,7 @@ public class update_login extends AppCompatActivity {
                     Toast.makeText(update_login.this, "(Title|Email|Password) invalid", Toast.LENGTH_SHORT).show();
                 }else {
                     obj.Update_Login(id_login,title, email, password);
+                    obj.Insert_P(Integer.parseInt(id_login),password);
                     Toast.makeText(update_login.this,"Update Valide", Toast.LENGTH_SHORT).show();
                     Intent intent= new Intent(update_login.this,home.class);
                     startActivity(intent);}

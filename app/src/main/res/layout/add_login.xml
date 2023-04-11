@@ -20,35 +20,48 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/add_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/add_login1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginLeft="2dp"
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="402dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_generate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_password"
+            android:layout_width="402dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/delet"
+            android:inputType="textPassword"
+            android:textSize="16dp"
+            android:hint="Password"
+            app:layout_constraintBottom_toTopOf="@+id/u_generate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/add_email"
-        android:layout_width="0dp"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
+
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/add_password"
+        app:layout_constraintBottom_toTopOf="@+id/password_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginLeft="2dp"
-
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -56,10 +69,10 @@
         android:id="@+id/add_title"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:layout_marginLeft="2dp"
-
         android:hint="Title"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/add_email"
